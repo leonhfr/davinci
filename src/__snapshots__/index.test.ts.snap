@@ -2,6 +2,8 @@
 
 exports[`index should expose the expected entries 1`] = `
 Object {
-  "default": [Function],
+  "Flickr": Object {
+    "API": [Function],
+  },
 }
 `;
