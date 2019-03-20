@@ -27,6 +27,8 @@
   },
   "license": "GPL-3.0-only",
   "dependencies": {
+    "@scenicroutes/wittgenstein": "0.0.1",
+    "@turf/helpers": "^6.1.4",
     "axios": "^0.18.0",
     "debug": "^4.0.1",
     "tslib": "^1.9.3"
