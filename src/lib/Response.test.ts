@@ -18,6 +18,25 @@ describe('Response', () => {
           Response.create(Mocks.createMockResponseInput())
         ).toMatchSnapshot();
       });
+      it('should return errors when the photos are not correctly formatted', () => {
+        expect(
+          Response.create({
+            ...Mocks.createMockResponse(),
+            photo: [Mocks.createMockPhoto()],
+          })
+        ).toMatchSnapshot();
+      });
+      it('should create a new instance when the photos are correctly formatted', () => {
+        expect(
+          Response.create(
+            {
+              ...Mocks.createMockResponse(),
+              photo: [Mocks.createMockPhoto()],
+            },
+            { zoneId: '4ab7068b-6c6c-46d2-8009-1d7d1ab35a3b', inside: false }
+          )
+        ).toMatchSnapshot();
+      });
     });
   });
 

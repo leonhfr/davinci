@@ -1,0 +1,113 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Formatter formatPhoto should correctly format an API response 1`] = `
+Object {
+  "accuracy": 16,
+  "context": 0,
+  "description": "The Arc de Triomf was built as the entrance of the 1888 Barcelona Universal Exposition. It was designed by architect Josep Vilaseca i Casanovas in the Neo-Mudéjar style.",
+  "farm": 5,
+  "geo_is_contact": 0,
+  "geo_is_family": 0,
+  "geo_is_friend": 0,
+  "geo_is_public": 1,
+  "id": "32457360587",
+  "isfamily": 0,
+  "isfriend": 0,
+  "ispublic": 1,
+  "latitude": 41.390791,
+  "longitude": 2.18114,
+  "owner": "41710899@N08",
+  "ownername": "jdf_92",
+  "place_id": "iFsnXNZTUriu3usbkw",
+  "secret": "69b27ceb18",
+  "server": "4898",
+  "tags": Array [
+    "spain",
+    "barcelona",
+    "arcdetriomf",
+    "1888barcelonaworldfair",
+    "neomudéjar",
+    "1888barcelonauniversalexposition",
+    "catelonia",
+  ],
+  "title": "Arc de Triomf",
+  "views": 16,
+  "woeid": "20220092",
+}
+`;
+
+exports[`Formatter formatPhoto should correctly format an API response 2`] = `
+Object {
+  "accuracy": 16,
+  "context": 0,
+  "description": undefined,
+  "farm": 5,
+  "geo_is_contact": 0,
+  "geo_is_family": 0,
+  "geo_is_friend": 0,
+  "geo_is_public": 1,
+  "id": "32457360587",
+  "isfamily": 0,
+  "isfriend": 0,
+  "ispublic": 1,
+  "latitude": 41.390791,
+  "longitude": 2.18114,
+  "owner": "41710899@N08",
+  "ownername": "jdf_92",
+  "place_id": "iFsnXNZTUriu3usbkw",
+  "secret": "69b27ceb18",
+  "server": "4898",
+  "tags": undefined,
+  "title": "Arc de Triomf",
+  "views": 16,
+  "woeid": "20220092",
+}
+`;
+
+exports[`Formatter formatPhoto should correctly pass properties 1`] = `
+Object {
+  "accuracy": 16,
+  "context": 0,
+  "description": "The Arc de Triomf was built as the entrance of the 1888 Barcelona Universal Exposition. It was designed by architect Josep Vilaseca i Casanovas in the Neo-Mudéjar style.",
+  "farm": 5,
+  "geo_is_contact": 0,
+  "geo_is_family": 0,
+  "geo_is_friend": 0,
+  "geo_is_public": 1,
+  "id": "32457360587",
+  "inside": false,
+  "isfamily": 0,
+  "isfriend": 0,
+  "ispublic": 1,
+  "latitude": 41.390791,
+  "longitude": 2.18114,
+  "owner": "41710899@N08",
+  "ownername": "jdf_92",
+  "place_id": "iFsnXNZTUriu3usbkw",
+  "secret": "69b27ceb18",
+  "server": "4898",
+  "tags": Array [
+    "spain",
+    "barcelona",
+    "arcdetriomf",
+    "1888barcelonaworldfair",
+    "neomudéjar",
+    "1888barcelonauniversalexposition",
+    "catelonia",
+  ],
+  "title": "Arc de Triomf",
+  "views": 16,
+  "woeid": "20220092",
+  "zoneId": "4ab7068b-6c6c-46d2-8009-1d7d1ab35a3b",
+}
+`;
+
+exports[`Formatter formatResponse should correctly format an API response 1`] = `
+Object {
+  "page": 1,
+  "pages": 25225,
+  "perpage": 2,
+  "photo": Array [],
+  "total": 50450,
+}
+`;

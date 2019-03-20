@@ -10,7 +10,45 @@ Response {
 }
 `;
 
+exports[`Response Class create should create a new instance when the photos are correctly formatted 1`] = `
+Response {
+  "page": 1,
+  "pages": 25225,
+  "perpage": 2,
+  "photo": Array [
+    Photo {
+      "context": 0,
+      "description": "The Arc de Triomf was built as the entrance of the 1888 Barcelona Universal Exposition. It was designed by architect Josep Vilaseca i Casanovas in the Neo-Mudéjar style.",
+      "farm": 5,
+      "id": "32457360587",
+      "inside": false,
+      "latitude": 41.390791,
+      "longitude": 2.18114,
+      "owner": "41710899@N08",
+      "ownername": "jdf_92",
+      "secret": "69b27ceb18",
+      "server": "4898",
+      "tags": Array [
+        "spain",
+        "barcelona",
+        "arcdetriomf",
+        "1888barcelonaworldfair",
+        "neomudéjar",
+        "1888barcelonauniversalexposition",
+        "catelonia",
+      ],
+      "title": "Arc de Triomf",
+      "views": 16,
+      "zoneId": "4ab7068b-6c6c-46d2-8009-1d7d1ab35a3b",
+    },
+  ],
+  "total": 50450,
+}
+`;
+
 exports[`Response Class create should fail to create a new instance - invalid input 1`] = `[Error: ValidationError: Expected input not to be null.]`;
+
+exports[`Response Class create should return errors when the photos are not correctly formatted 1`] = `[Error: [Photo Validation] ValidationError: Expected all input properties to be set, missing zoneId.]`;
 
 exports[`Response Validation should match the expected value 1`] = `
 Array [

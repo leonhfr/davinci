@@ -13,7 +13,10 @@ export class Response {
   readonly total: number;
   readonly photo: Array<Wittgenstein.Photo>;
 
-  static create(input: unknown): Response | Error {
+  static create(
+    input: unknown,
+    photoProperties?: Types.PhotoProperties
+  ): Response | Error {
     input = Formatter.formatResponse(input);
 
     if (isResponse(input)) {
@@ -22,11 +25,11 @@ export class Response {
 
       for (const photoItem of photo) {
         const maybePhoto = Wittgenstein.Photo.create(
-          Formatter.formatPhoto(photoItem)
+          Formatter.formatPhoto(photoItem, photoProperties)
         );
 
         if (maybePhoto instanceof Error) {
-          return maybePhoto;
+          return new Error(`[Photo Validation] ${maybePhoto.message}`);
         }
         safePhoto.push(maybePhoto);
       }

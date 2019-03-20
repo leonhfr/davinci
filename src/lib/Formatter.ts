@@ -3,7 +3,7 @@ import * as Types from '../types';
 
 // Code.
 export class Formatter {
-  static formatResponse(input: any): Types.KeyValue {
+  static formatResponse(input: any): any {
     if (typeof input !== 'object' || input === null) {
       return input;
     }
@@ -18,7 +18,10 @@ export class Formatter {
     };
   }
 
-  static formatPhoto(input: Types.KeyValue): Types.KeyValue {
+  static formatPhoto(
+    input: any,
+    properties?: Types.PhotoProperties
+  ): any {
     if (typeof input !== 'object' || input === null) {
       return input;
     }
@@ -33,6 +36,6 @@ export class Formatter {
       tags = tags.split(' ');
     }
 
-    return { ...input, description, tags };
+    return { ...input, description, tags, ...properties };
   }
 }
