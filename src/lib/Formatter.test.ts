@@ -1,7 +1,6 @@
 // Internal.
 import { Formatter } from './Formatter';
 import * as Mocks from '../mocks';
-import * as Types from '../types';
 
 // Code.
 describe('Formatter', () => {
@@ -36,11 +35,10 @@ describe('Formatter', () => {
       expect(result2).toMatchSnapshot();
     });
     it('should correctly pass properties', () => {
-      const properties: Types.PhotoProperties = {
-        zoneId: '4ab7068b-6c6c-46d2-8009-1d7d1ab35a3b',
-        inside: false,
-      };
-      const result = Formatter.formatPhoto(Mocks.createMockPhoto(), properties);
+      const result = Formatter.formatPhoto(
+        Mocks.createMockPhoto(),
+        Mocks.photoProperties
+      );
       expect(result).toMatchSnapshot();
     });
   });

@@ -1,5 +1,6 @@
 // Internal.
 import { CreateResponseInput } from '../lib/Response';
+import * as Types from '../types';
 
 // Code.
 export const createMockResponseInput = (
@@ -60,5 +61,17 @@ export const createMockPhoto = (photo?: any) => {
   };
 };
 
-// zoneId: _photo.zoneId || '4ab7068b-6c6c-46d2-8009-1d7d1ab35a3b',
-// inside: _photo.inside || true,
+export const photoProperties: Types.PhotoProperties = {
+  zoneId: '4ab7068b-6c6c-46d2-8009-1d7d1ab35a3b',
+  inside: false,
+};
+
+export const apiKey = 'test_api_key';
+
+export const searchOptions: Types.SearchOptions = {
+  bbox: [2.18, 41.4, 2.19, 41.5],
+  min_upload_date: 1546300800,
+  max_upload_date: 1546387200,
+  tags: ['foo', 'bar'],
+  page: undefined,
+};

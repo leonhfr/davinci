@@ -13,7 +13,11 @@ const debugVerbose = debug('davinci:verbose:flickr');
 
 export namespace Flickr {
   export class API {
-    static async search(api_key: string, searchOptions: Types.SearchOptions) {
+    static async search(
+      api_key: string,
+      searchOptions: Types.SearchOptions,
+      photoProperties?: Types.PhotoProperties
+    ) {
       debugVerbose(
         `requesting photos.search with parameters %o`,
         searchOptions
@@ -35,6 +39,7 @@ export namespace Flickr {
         ...methodParameters,
         ...searchOptions,
       });
+
       const response = await axios.get(FLICKR_API_ENDPOINT, parameters);
 
       const { data, status, statusText } = response;
@@ -53,7 +58,7 @@ export namespace Flickr {
 
       const { photos } = data;
 
-      return Response.create(photos);
+      return Response.create(photos, photoProperties);
     }
 
     private static makeSafeParameters(
