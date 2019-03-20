@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`index should expose the expected entries 1`] = `
+Object {
+  "FLICKR_API_ENDPOINT": "https://api.flickr.com/services/rest/",
+  "FLICKR_API_PARAMETERS": Object {
+    "format": "json",
+  },
+}
+`;

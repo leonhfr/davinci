@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Flickr API search should query the api with axios.get and return the expected result 1`] = `
+Response {
+  "page": 1,
+  "pages": 25225,
+  "perpage": 2,
+  "photo": Array [
+    Photo {
+      "context": 0,
+      "description": "The Arc de Triomf was built as the entrance of the 1888 Barcelona Universal Exposition. It was designed by architect Josep Vilaseca i Casanovas in the Neo-Mudéjar style.",
+      "farm": 5,
+      "id": "32457360587",
+      "inside": false,
+      "latitude": 41.390791,
+      "longitude": 2.18114,
+      "owner": "41710899@N08",
+      "ownername": "jdf_92",
+      "secret": "69b27ceb18",
+      "server": "4898",
+      "tags": Array [
+        "spain",
+        "barcelona",
+        "arcdetriomf",
+        "1888barcelonaworldfair",
+        "neomudéjar",
+        "1888barcelonauniversalexposition",
+        "catelonia",
+      ],
+      "title": "Arc de Triomf",
+      "views": 16,
+      "zoneId": "4ab7068b-6c6c-46d2-8009-1d7d1ab35a3b",
+    },
+  ],
+  "total": 50450,
+}
+`;
+
+exports[`Flickr API search should return an error if the request fails 1`] = `[Error: Flickr API answered with 500: ERROR]`;
+
+exports[`index should expose the expected entries 1`] = `
+Object {
+  "Flickr": Object {
+    "API": [Function],
+  },
+}
+`;
