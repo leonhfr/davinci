@@ -2,17 +2,6 @@
 
 exports[`index should expose the expected entries 1`] = `
 Object {
-  "Flickr": Object {
-    "API": [Function],
-    "PhotoSize": Object {
-      "LargeSquare": "q",
-      "Medium500": "",
-      "Medium640": "z",
-      "Small240": "m",
-      "Small320": "n",
-      "SmallSquare": "s",
-      "Thumbnail": "t",
-    },
-  },
+  "default": [Function],
 }
 `;

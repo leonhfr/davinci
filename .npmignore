@@ -4,6 +4,7 @@
 .circleci
 .serverless
 
+*.test.ts.snap
 *.test.d.ts
 *.test.js
 *.md

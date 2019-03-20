@@ -50,7 +50,8 @@
   ],
   "jest": {
     "coveragePathIgnorePatterns": [
-      "<rootDir>/node_modules/"
+      "<rootDir>/node_modules/",
+      "<rootDir>/src/mocks"
     ],
     "transform": {
       "^.+\\.tsx?$": "ts-jest"

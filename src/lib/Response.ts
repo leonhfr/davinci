@@ -47,13 +47,7 @@ export class Response {
   }
 }
 
-export const PHOTO_SEARCH_PROPS = [
-  'page',
-  'pages',
-  'perpage',
-  'total',
-  'photo',
-];
+export const RESPONSE_PROPS = ['page', 'pages', 'perpage', 'total', 'photo'];
 
 export const isResponse = (input: unknown): input is CreateResponseInput => {
   return isSafeResponse(input).isSafe;
@@ -74,7 +68,7 @@ export const isSafeResponse = (input: unknown): Types.IsSafe => {
     };
   }
 
-  for (const key of PHOTO_SEARCH_PROPS) {
+  for (const key of RESPONSE_PROPS) {
     if (!input.hasOwnProperty(key)) {
       return {
         isSafe: false,

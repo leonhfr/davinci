@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Response Class create should create a new instance 1`] = `
+Response {
+  "page": 1,
+  "pages": 25225,
+  "perpage": 2,
+  "photo": Array [],
+  "total": 50450,
+}
+`;
+
+exports[`Response Class create should fail to create a new instance - invalid input 1`] = `[Error: ValidationError: Expected input not to be null.]`;
+
+exports[`Response Validation should match the expected value 1`] = `
+Array [
+  "page",
+  "pages",
+  "perpage",
+  "total",
+  "photo",
+]
+`;
