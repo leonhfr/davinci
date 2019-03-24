@@ -23,7 +23,7 @@ export type SearchOptions = {
   geo_context?: number; // 0 undefined, 1 indoors, 2 outdoors
   tags?: Array<string>; // prefix with '-' to exclude
   tag_mode?: string; // 'any' or 'all'
-  test?: string; // (title, description or tags) prefix with '-' to exclude
+  text?: string; // (title, description or tags) prefix with '-' to exclude
 };
 
 export type PhotoProperties = {
