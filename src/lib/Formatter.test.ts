@@ -31,8 +31,15 @@ describe('Formatter', () => {
         description: undefined,
         tags: undefined,
       });
+      const result3 = Formatter.formatPhoto({
+        ...photo,
+        views: 'a',
+        latitude: 'a',
+        longitude: 'a',
+      });
       expect(result1).toMatchSnapshot();
       expect(result2).toMatchSnapshot();
+      expect(result3).toMatchSnapshot();
     });
     it('should correctly pass properties', () => {
       const result = Formatter.formatPhoto(
