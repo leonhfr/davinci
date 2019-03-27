@@ -25,14 +25,8 @@ export class Formatter {
 
     let { description, tags, views, latitude, longitude } = input;
 
-    if (description && description._content) {
-      description = description._content;
-    }
-
-    if (tags && typeof tags === 'string') {
-      tags = tags.split(' ');
-    }
-
+    description = (description && description._content) || '';
+    tags = (tags && tags.length && tags.split(' ')) || [];
     views = Number.isNaN(Number(views)) ? null : Number(views);
     latitude = Number.isNaN(Number(latitude)) ? null : Number(latitude);
     longitude = Number.isNaN(Number(longitude)) ? null : Number(longitude);
