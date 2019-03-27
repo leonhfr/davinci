@@ -18,15 +18,12 @@ export class Formatter {
     };
   }
 
-  static formatPhoto(
-    input: any,
-    properties?: Types.PhotoProperties
-  ): any {
+  static formatPhoto(input: any, properties?: Types.PhotoProperties): any {
     if (typeof input !== 'object' || input === null) {
       return input;
     }
 
-    let { description, tags } = input;
+    let { description, tags, views, latitude, longitude } = input;
 
     if (description && description._content) {
       description = description._content;
@@ -36,6 +33,18 @@ export class Formatter {
       tags = tags.split(' ');
     }
 
-    return { ...input, description, tags, ...properties };
+    views = Number.isNaN(Number(views)) ? null : Number(views);
+    latitude = Number.isNaN(Number(latitude)) ? null : Number(latitude);
+    longitude = Number.isNaN(Number(longitude)) ? null : Number(longitude);
+
+    return {
+      ...input,
+      description,
+      tags,
+      views,
+      latitude,
+      longitude,
+      ...properties,
+    };
   }
 }

@@ -44,12 +44,12 @@ export const createMockPhoto = (photo?: any) => {
         'The Arc de Triomf was built as the entrance of the 1888 Barcelona Universal Exposition. It was designed by architect Josep Vilaseca i Casanovas in the Neo-Mudéjar style.',
     },
     ownername: _photo.ownername || 'jdf_92',
-    views: _photo.views || 16,
+    views: _photo.views || '16',
     tags:
       _photo.tags ||
       'spain barcelona arcdetriomf 1888barcelonaworldfair neomudéjar 1888barcelonauniversalexposition catelonia',
-    latitude: _photo.latitude || 41.390791,
-    longitude: _photo.longitude || 2.18114,
+    latitude: _photo.latitude || '41.390791',
+    longitude: _photo.longitude || '2.18114',
     accuracy: 16,
     context: _photo.context || 0,
     place_id: 'iFsnXNZTUriu3usbkw',
