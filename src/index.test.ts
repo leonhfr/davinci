@@ -77,19 +77,21 @@ describe('Flickr', () => {
         expect(result).toMatchSnapshot();
         expect(axiosGetSpy).toHaveBeenCalledTimes(1);
         expect(axiosGetSpy).toHaveBeenCalledWith(FLICKR_API_ENDPOINT, {
-          api_key: 'test_api_key',
-          format: 'json',
-          method: 'flickr.photos.search',
-          sort: 'date-posted-asc',
-          accuracy: '16',
-          content_type: '1',
-          media: 'photos',
-          extras: 'geo,description,owner_name,tags,views,o_dims',
-          per_page: '250',
-          bbox: '2.18,41.4,2.19,41.5',
-          min_upload_date: '1546300800',
-          max_upload_date: '1546387200',
-          tags: 'foo,bar',
+          params: {
+            api_key: 'test_api_key',
+            format: 'json',
+            method: 'flickr.photos.search',
+            sort: 'date-posted-asc',
+            accuracy: '16',
+            content_type: '1',
+            media: 'photos',
+            extras: 'geo,description,owner_name,tags,views,o_dims',
+            per_page: '250',
+            bbox: '2.18,41.4,2.19,41.5',
+            min_upload_date: '1546300800',
+            max_upload_date: '1546387200',
+            tags: 'foo,bar',
+          },
         });
       });
     });

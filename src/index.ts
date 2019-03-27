@@ -40,7 +40,9 @@ export namespace Flickr {
         ...searchOptions,
       });
 
-      const response = await axios.get(FLICKR_API_ENDPOINT, parameters);
+      const response = await axios.get(FLICKR_API_ENDPOINT, {
+        params: parameters,
+      });
 
       const { data, status, statusText } = response;
 
