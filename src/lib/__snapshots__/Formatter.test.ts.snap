@@ -40,7 +40,7 @@ exports[`Formatter formatPhoto should correctly format an API response 2`] = `
 Object {
   "accuracy": 16,
   "context": 0,
-  "description": undefined,
+  "description": "",
   "farm": 5,
   "geo_is_contact": 0,
   "geo_is_family": 0,
@@ -57,7 +57,7 @@ Object {
   "place_id": "iFsnXNZTUriu3usbkw",
   "secret": "69b27ceb18",
   "server": "4898",
-  "tags": undefined,
+  "tags": Array [],
   "title": "Arc de Triomf",
   "views": 16,
   "woeid": "20220092",
