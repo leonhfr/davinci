@@ -1,6 +1,6 @@
 {
   "name": "@scenicroutes/davinci",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Da Vinci: Flickr API for Scenic Routes",
   "main": "./build/index.js",
   "types": "./build/index.d.ts",
