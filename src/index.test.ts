@@ -52,13 +52,36 @@ describe('Flickr', () => {
         );
         expect(result).toMatchSnapshot();
       });
+      it('should return an error if parsing fails', async () => {
+        const mockApiResponse = {
+          data: 'jsonFlickrApi(this is not json)',
+          status: 200,
+          statusText: 'OK',
+          headers: '',
+          config: '',
+        };
+        axiosGetSpy = jest
+          .spyOn(axios, 'get')
+          //@ts-ignore
+          .mockImplementation(async () => Promise.resolve(mockApiResponse));
+
+        const result = await Flickr.API.search(
+          Mocks.apiKey,
+          Mocks.searchOptions,
+          Mocks.photoProperties
+        );
+        expect(result).toMatchSnapshot();
+      });
       it('should query the api with axios.get and return the expected result', async () => {
         const mockApiResponse = {
-          data: {
-            photos: Mocks.createMockResponse({
-              photo: [Mocks.createMockPhoto()],
-            }),
-          },
+          data:
+            'jsonFlickrApi(' +
+            JSON.stringify({
+              photos: Mocks.createMockResponse({
+                photo: [Mocks.createMockPhoto()],
+              }),
+            }) +
+            ')',
           status: 200,
           statusText: 'OK',
           headers: '',
