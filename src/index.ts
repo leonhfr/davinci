@@ -17,7 +17,7 @@ export namespace Flickr {
       api_key: string,
       searchOptions: Types.SearchOptions,
       photoProperties?: Types.PhotoProperties
-    ) {
+    ): Promise<Response | Error> {
       debugVerbose(
         `requesting photos.search with parameters %o`,
         searchOptions
@@ -58,9 +58,18 @@ export namespace Flickr {
 
       debugVerbose(`photos.search answered with: %o`, data);
 
-      const { photos } = data;
+      try {
+        const string = (data as string).toString().slice(14, -1);
 
-      return Response.create(photos, photoProperties);
+        const json = JSON.parse(string);
+
+        const { photos } = json;
+
+        return Response.create(photos, photoProperties);
+      } catch (err) {
+        debugError(`Couldn't complete parsing.`);
+        return err;
+      }
     }
 
     private static makeSafeParameters(

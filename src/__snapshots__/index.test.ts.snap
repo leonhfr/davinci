@@ -36,6 +36,8 @@ Response {
 }
 `;
 
+exports[`Flickr API search should return an error if parsing fails 1`] = `[SyntaxError: Unexpected token h in JSON at position 1]`;
+
 exports[`Flickr API search should return an error if the request fails 1`] = `[Error: Flickr API answered with 500: ERROR]`;
 
 exports[`index should expose the expected entries 1`] = `
